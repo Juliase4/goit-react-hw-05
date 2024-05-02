@@ -37,7 +37,7 @@ export default function MoviesPage() {
     <div>
       <MovieSearchForm onSearch={handleSearchMovie} />
       {error && <p>Sorry, we have some troubles</p>}
-      {loading && <p>Loading movies</p>}
+      {loading && <p>Loading movies...</p>}
       {movies.length > 0 && <MovieList data={movies} />}
     </div>
   );
