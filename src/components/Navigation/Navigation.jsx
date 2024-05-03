@@ -8,7 +8,7 @@ const getNavLinkClass = ({ isActive }) => {
 
 export default function Navigation() {
   return (
-    <nav>
+    <nav className={css.createLine}>
       <NavLink
         to="/"
         className={getNavLinkClass}>

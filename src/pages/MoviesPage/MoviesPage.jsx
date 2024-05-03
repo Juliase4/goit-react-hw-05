@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { getSearchMovie } from "../../movies-api";
 import MovieList from "../../components/MovieList/MovieList";
 import MovieSearchForm from "../../components/MovieSearchForm/MovieSearchForm";
+import css from "./MoviesPage.module.css";
 
 export default function MoviesPage() {
   const [movies, setMovies] = useState([]);
@@ -34,7 +35,7 @@ export default function MoviesPage() {
     setQuery(newMovie);
   };
   return (
-    <div>
+    <div className={css.container}>
       <MovieSearchForm onSearch={handleSearchMovie} />
       {error && <p>Sorry, we have some troubles</p>}
       {loading && <p>Loading movies...</p>}

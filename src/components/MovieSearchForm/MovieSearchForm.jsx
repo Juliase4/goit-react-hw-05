@@ -1,5 +1,6 @@
 import toast, { Toaster } from "react-hot-toast";
 import { Formik, Form, Field } from "formik";
+import css from "./MovieSearchForm.module.css";
 
 export default function MovieSearchForm({ onSearch }) {
   return (
@@ -14,7 +15,7 @@ export default function MovieSearchForm({ onSearch }) {
         onSearch(values.query);
         actions.resetForm();
       }}>
-      <Form>
+      <Form className={css.input}>
         <Field name="query">
           {({ field }) => (
             <input
